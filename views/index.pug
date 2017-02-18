@@ -1,0 +1,29 @@
+doctype 5
+html
+  head
+    title='Kim Kwanka\'s ' + title
+    link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css')
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    .stickyFooterWrapper
+      header
+        .container        
+          .row          
+            .column.column-50.column-offset-25
+              a(href='//kimkwanka.com' target='_blank' style='text-align:center') Kim Kwanka's
+              h1=title
+      .container        
+        .row          
+          .column.column-50.column-offset-25                
+            h2 Submit a file to view its filesize!
+            h3 Just like your grandma used to say: 
+              i "It's as easy as clicking the left button, selecting a file and then hitting that button on the right."
+            form(method='post' enctype='multipart/form-data' action='/file')
+              input#file-upload(type='file' name='fileupload' style='visibility:hidden')
+              
+              label I believe in you...
+              label.button(for='file-upload') Choose file
+              input(type='submit')
+            
+    footer
+          a(href='https://github.com/kimkwanka/fcc-isal' target='_blank') View source on Github
